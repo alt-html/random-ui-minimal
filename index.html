@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Random Number Picker (Minimal)">
+    <meta name="author" content="Craig Parravicini">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' id='google-font-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C600%7CRoboto&#038;ver=1.0' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+
+    <title>Random Number Picker (Minimal)</title>
+
+    <script src="https://kit.fontawesome.com/10808f8e76.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@alt-javascript/lang@1.0.3/dist/alt-javascript-lang-iife.js"></script>
+
+</head>
+    <body>
+    <noscript>
+        <div class="text-light text-center p-5">
+            <div class="alert alert-danger" role="alert">
+                We're sorry but Cloud Pad requires JavaScript to be enabled. Please enable it and refresh the page to continue.
+            </div>
+        </div>
+    </noscript>
+    <div id="app">
+        <div id="no_es2020" style="display:none" class="text-light text-center p-5" v-bind:class="{'d-none':loaded}">
+            <div class="alert alert-danger" role="alert">
+                We're sorry but VueJS & Bootstrap CSS (Minimal) requires JavaScript 11 (ECMAScript 2020). Please upgrade your browser to continue.
+            </div>
+        </div>
+        <main class="d-none p-1" v-bind:class="{'d-block':loaded}">
+            <div>
+            <h1 id="result" class="text-center">{{ random }}</h1>
+            <button id="switch"
+                    class="btn-primary center btn p0 my-0 px-0"
+                    type="button "
+                    v-on:click="clicked()" >
+                Pick
+            </button>
+            </div>
+        </main>
+    </div>
+    <script>
+        es2020 = true;
+        if (!lang.allOk(lang.es2020)){
+            console.error('We\'re sorry but VueJS & Bootstrap CSS (Minimal) requires JavaScript 11 (ECMAScript 2020). Please upgrade your browser to continue.');
+            es2020 = false;
+            document.getElementById("no_es2020").style.display = "block";
+        }
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
