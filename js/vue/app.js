@@ -10,7 +10,7 @@ const app = Vue.createApp({
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
         })
-        console.info(`The initial pick is ${ this.random }.`)
+        this.logger?.verbose (`The initial pick is ${ this.random }.`)
     }
 });
 
