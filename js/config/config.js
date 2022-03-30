@@ -9,7 +9,7 @@ export default ConfigFactory.getConfig({
             "/" : "warn",
         }
     },
-    "https://alt-html.github.io/random-ui-minimal/" :{
+    "https://alt-html+github+io/random-ui-minimal/" :{
         logging : {
             format : "text",
             level : {
